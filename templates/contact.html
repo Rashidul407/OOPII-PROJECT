@@ -2,24 +2,27 @@
 
 
 {%block body %}
+<form method="post">
+    <div class="container border mt-5 p-5">
+        <h2 class="text-center my-5 h1">Contact Me</h2>
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input name="email" class="form-control" id="exampleFormControlInput1" required placeholder="xyz@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea name = 'message' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Submit">        
+        </div>
+    </div></form>
 
-<div class="container border mt-5 p-5">
-    <h2 class="text-center my-5 h1">Contact Me</h2>
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" required placeholder="xyz@example.com">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-    <div>
-        <input class="btn btn-primary" type="submit" value="Submit">        
-    </div>
-</div>
+
 
 {% endblock %}
